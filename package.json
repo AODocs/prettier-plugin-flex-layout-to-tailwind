@@ -1,0 +1,54 @@
+{
+  "name": "prettier-plugin-flex-layout-to-tailwind",
+  "version": "0.0.1",
+  "description": "Codemod to migrate away from @angular/flex-layout to tailwind utility classes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NiklasPor/prettier-plugin-flex-layout-to-tailwind"
+  },
+  "author": {
+    "name": "David Ratier",
+    "email": "ratierd@gmail.com"
+  },
+  "keywords": [
+    "prettier",
+    "plugin",
+    "flex-layout",
+    "tailwind"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --pretty",
+    "watch": "npm run build -- --watch",
+    "watch:test": "jest --watch",
+    "release:plugin": "npm run test && npm run build && npm publish",
+    "release:plugin:beta": "npm run test && npm run build && npm publish --tag beta"
+  },
+  "peerDependencies": {
+    "prettier": "^2.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.2",
+    "@types/prettier": "^2.2.3",
+    "codecov": "^3.8.0",
+    "jest": "^26.6.1",
+    "prettier": "^2.3.0",
+    "ts-jest": "^26.4.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=11.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
